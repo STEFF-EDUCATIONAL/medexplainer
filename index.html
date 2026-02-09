@@ -1,72 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MEDEXPLAINER – Legal Information</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #222;
-            padding: 40px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        h1 {
-            margin-top: 0;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .links {
-            margin-top: 20px;
-        }
-        .links li {
-            margin-bottom: 10px;
-        }
-        footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #666;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medexplainer — Informational medical explanations</title>
+  <meta name="description" content="Medexplainer helps users understand medical information and documents with clear, educational explanations. Informational content only." />
+
+  <style>
+    :root{
+      --bg:#0F172A;         /* deep navy */
+      --panel:#1E293B;      /* blue-gray */
+      --text:#F8FAFC;       /* near-white */
+      --muted:#94A3B8;      /* muted gray-blue */
+      --accent:#2DD4BF;     /* teal */
+      --accent2:#38BDF8;    /* soft cyan */
+      --border:rgba(148,163,184,.18);
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(45,212,191,.18), transparent 60%),
+        radial-gradient(700px 400px at 80% 0%, rgba(56,189,248,.14), transparent 55%),
+        radial-gradient(800px 600px at 50% 110%, rgba(45,212,191,.10), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:40px 18px 60px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:10px 0 24px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;text-decoration:none;
+    }
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(45,212,191,.95), rgba(56,189,248,.85));
+      box-shadow: 0 10px 26px rgba(45,212,191,.18);
+      display:grid;place-items:center;
+    }
+    .logo svg{opacity:.95}
+    .brand b{letter-spacing:.2px}
+    .nav{
+      display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+      font-size:14px;color:var(--muted);
+    }
+    .nav a{color:var(--muted);text-decoration:none}
+    .nav a:hover{color:var(--text)}
+    .hero{
+      display:grid;grid-template-columns: 1.2fr .8fr;gap:22px;align-items:stretch;
+      margin-top:8px;
+    }
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background: rgba(30,41,59,.72);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .hero .left{padding:28px}
+    .kicker{
+      display:inline-flex;gap:8px;align-items:center;
+      color:var(--muted);font-size:13px;
+      border:1px solid var(--border);
+      padding:8px 10px;border-radius:999px;
+      background: rgba(15,23,42,.35);
+    }
+    h1{margin:14px 0 10px;font-size:42px;line-height:1.15}
+    @media (max-width:480px){ h1{font-size:34px} }
+    .sub{color:var(--muted);font-size:16px;max-width:52ch;margin:0 0 18px}
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{
+      border:0;border-radius:14px;padding:12px 16px;
+      font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;gap:10px;align-items:center;
+    }
+    .btnPrimary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #062018;
+      box-shadow: 0 14px 32px rgba(45,212,191,.20);
+    }
+    .btnPrimary:hover{filter:brightness(1.04)}
+    .btnGhost{
+      background: rgba(15,23,42,.25);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btnGhost:hover{border-color:rgba(148,163,184,.28)}
+    .hero .right{padding:22px;display:flex;flex-direction:column;gap:12px}
+    .mini{
+      padding:16px;border-radius:16px;background: rgba(15,23,42,.25);
+      border: 1px solid var(--border);
+    }
+    .mini b{display:block;margin-bottom:6px}
+    .mini p{margin:0;color:var(--muted);font-size:14px}
+    section{margin-top:18px}
+    .grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;
+    }
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+    .step{padding:18px;}
+    .badge{
+      width:34px;height:34px;border-radius:12px;
+      background: rgba(45,212,191,.14);
+      border: 1px solid rgba(45,212,191,.26);
+      display:grid;place-items:center;margin-bottom:10px;
+      color: var(--accent);
+      font-weight:800;
+    }
+    .step h3{margin:0 0 6px;font-size:16px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .disclaimer{
+      padding:18px;border-left:3px solid var(--accent);
+    }
+    .disclaimer h2{margin:0 0 8px;font-size:18px}
+    .disclaimer p{margin:0;color:var(--muted);font-size:14px}
+    .twoCols{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;
+    }
+    @media (max-width:860px){ .twoCols{grid-template-columns:1fr} }
+    .linkList a{
+      display:block;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(15,23,42,.25);
+      text-decoration:none;
+      color:var(--text);
+    }
+    .linkList a:hover{border-color:rgba(148,163,184,.28)}
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+    }
+    .small{font-size:12px;color:var(--muted)}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>MEDEXPLAINER</h1>
-        <p>
-            This page provides legal information related to the MEDEXPLAINER mobile application.
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./index.html" aria-label="Medexplainer home">
+        <div class="logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.65-7 10-7 10Z" fill="rgba(6,32,24,.95)"/>
+          </svg>
+        </div>
+        <div>
+          <b>Medexplainer</b><div class="small">Informational content only</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#legal">Legal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card left">
+        <div class="kicker">Educational app • Clear explanations • Document-friendly</div>
+        <h1>Understand medical information—clearly.</h1>
+        <p class="sub">
+          Medexplainer helps users better understand laboratory results and uploaded medical documents
+          by providing structured, educational explanations.
         </p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#legal">Privacy & Terms</a>
+          <a class="btn btnGhost" href="#contact">Contact</a>
+        </div>
+        <p class="small" style="margin-top:14px;">
+          Designed to support understanding. For medical concerns and decisions, consult a qualified healthcare professional.
+        </p>
+      </div>
 
-        <ul class="links">
-            <li>
-                <a href="./privacy-policy.txt" target="_blank">
-                    Privacy Policy
-                </a>
-            </li>
-            <li>
-                <a href="./terms-of-use.txt" target="_blank">
-                    Terms of Use
-                </a>
-            </li>
-        </ul>
-
-        <footer>
-            © 2026 MEDEXPLAINER
-        </footer>
+      <div class="card right">
+        <div class="mini">
+          <b>What it is</b>
+          <p>An educational assistant that explains medical information in a readable way.</p>
+        </div>
+        <div class="mini">
+          <b>What it provides</b>
+          <p>Informational explanations to improve understanding of data and documents.</p>
+        </div>
+        <div class="mini">
+          <b>Who it’s for</b>
+          <p>Anyone who wants clearer context for lab results and medical documents.</p>
+        </div>
+      </div>
     </div>
+
+    <section id="how" class="card" style="padding:20px 18px;">
+      <h2 style="margin:0 0 6px;font-size:18px;">How it works</h2>
+      <div class="grid">
+        <div class="step card" style="box-shadow:none;background:rgba(15,23,42,.18);">
+          <div class="badge">1</div>
+          <h3>Upload</h3>
+          <p>Upload medical data or documents (e.g., lab results, PDFs, images).</p>
+        </div>
+        <div class="step card" style="box-shadow:none;background:rgba(15,23,42,.18);">
+          <div class="badge">2</div>
+          <h3>Get an explanation</h3>
+          <p>Receive a structured informational explanation focused on clarity.</p>
+        </div>
+        <div class="step card" style="box-shadow:none;background:rgba(15,23,42,.18);">
+          <div class="badge">3</div>
+          <h3>Review</h3>
+          <p>Use the explanation to better understand your information and discuss it with a professional if needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="disclaimer" class="card disclaimer">
+      <h2>Informational Disclaimer</h2>
+      <p>
+        Medexplainer provides informational and educational content only. The app is designed to help users understand
+        medical information and documents. It does not replace a doctor or healthcare professional.
+        For medical concerns, decisions, or next steps, consult a qualified healthcare professional.
+      </p>
+    </section>
+
+    <section id="legal" class="twoCols">
+      <div class="card" style="padding:18px;">
+        <h2 style="margin:0 0 10px;font-size:18px;">Legal</h2>
+        <div class="linkList" style="display:grid;gap:10px;">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-use.html">Terms of Use</a>
+        </div>
+      </div>
+
+      <div id="contact" class="card" style="padding:18px;">
+        <h2 style="margin:0 0 10px;font-size:18px;">Contact</h2>
+        <p class="small" style="margin:0 0 10px;">
+          This email address is used for contacting support and legal matters.
+          Please note: Medexplainer provides informational content only.
+        </p>
+        <p style="margin:0;font-weight:800;">
+          <a href="mailto:support@medexplainer.online">support@medexplainer.online</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 Medexplainer. Informational content only.</div>
+      <div>
+        <a class="small" href="./privacy-policy.html">Privacy Policy</a>
+        <span class="small"> • </span>
+        <a class="small" href="./terms-of-use.html">Terms of Use</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

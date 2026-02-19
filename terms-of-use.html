@@ -1,238 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Terms of Use — Medexplainer</title>
-  <meta name="description" content="Terms of Use for Medexplainer (medexplainer.online)." />
-  <style>
-    :root{
-      --bg:#0F172A;
-      --panel:#1E293B;
-      --text:#F8FAFC;
-      --muted:#94A3B8;
-      --accent:#2DD4BF;
-      --accent2:#38BDF8;
-      --border:rgba(148,163,184,.18);
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius: 18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 20% 10%, rgba(45,212,191,.18), transparent 60%),
-        radial-gradient(700px 400px at 80% 0%, rgba(56,189,248,.14), transparent 55%),
-        radial-gradient(800px 600px at 50% 110%, rgba(45,212,191,.10), transparent 55%),
-        var(--bg);
-      line-height:1.55;
-    }
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:40px 18px 60px}
-    header{
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
-      padding:10px 0 24px;
-    }
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo{
-      width:42px;height:42px;border-radius:14px;
-      background: linear-gradient(135deg, rgba(45,212,191,.95), rgba(56,189,248,.85));
-      box-shadow: 0 10px 26px rgba(45,212,191,.18);
-      display:grid;place-items:center;
-    }
-    .logo svg{opacity:.95}
-    .brand b{letter-spacing:.2px}
-    .small{font-size:12px;color:var(--muted)}
-    .nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--muted)}
-    .nav a{color:var(--muted);text-decoration:none}
-    .nav a:hover{color:var(--text)}
-    .card{
-      background: rgba(30,41,59,.72);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-    .content{padding:26px}
-    h1{margin:0 0 8px;font-size:34px;line-height:1.15}
-    h2{margin:22px 0 10px;font-size:18px}
-    p{margin:10px 0;color:var(--muted)}
-    ul{margin:8px 0 12px 18px;color:var(--muted)}
-    li{margin:6px 0}
-    .kicker{
-      display:inline-flex;gap:8px;align-items:center;
-      color:var(--muted);font-size:13px;
-      border:1px solid var(--border);
-      padding:8px 10px;border-radius:999px;
-      background: rgba(15,23,42,.35);
-      margin-bottom:14px;
-    }
-    .notice{
-      margin-top:14px;
-      padding:14px 16px;
-      border-left:3px solid var(--accent);
-      background: rgba(15,23,42,.25);
-      border-radius:14px;
-      border:1px solid var(--border);
-    }
-    footer{
-      margin-top:22px;color:var(--muted);font-size:13px;
-      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      padding-top:18px;border-top:1px solid var(--border);
-    }
-    .linkRow{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 12px;border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(15,23,42,.25);
-      text-decoration:none;
-    }
-    .pill:hover{border-color:rgba(148,163,184,.28)}
-    code{
-      background: rgba(15,23,42,.35);
-      border:1px solid var(--border);
-      padding:2px 6px;border-radius:8px;color:var(--text);
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Use – MedExplainer</title>
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:#0f172a;
+  color:#ffffff;
+  line-height:1.7;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+h1{
+  font-size:32px;
+  margin-bottom:20px;
+}
+h2{
+  margin-top:30px;
+}
+.footer-nav{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+.btn-secondary{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.05);
+  color:inherit;
+  text-decoration:none;
+  font-weight:500;
+}
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.1);
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="./index.html" aria-label="Medexplainer home">
-        <div class="logo" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.65-7 10-7 10Z" fill="rgba(6,32,24,.95)"/>
-          </svg>
-        </div>
-        <div>
-          <b>Medexplainer</b><div class="small">Informational content only</div>
-        </div>
-      </a>
-      <nav class="nav">
-        <a href="./privacy-policy.html">Privacy</a>
-        <a href="./index.html#contact">Contact</a>
-      </nav>
-    </header>
+<div class="container">
+  <h1>Terms of Use</h1>
+  <p>Last updated: 19 February 2026</p>
 
-    <main class="card content">
-      <div class="kicker">Terms of Use • medexplainer.online</div>
-      <h1>Terms of Use</h1>
-      <p class="small">Last updated: <b>2026-02-09</b></p>
+  <h2>1. Informational Use Only</h2>
+  <p>
+    MedExplainer provides informational explanations of medical data.
+    The service does not provide medical advice, diagnosis, or treatment.
+    Always consult a licensed physician.
+  </p>
 
-      <div class="notice">
-        <p style="margin:0;color:var(--text);font-weight:700;">Informational use only</p>
-        <p style="margin:8px 0 0;color:var(--muted);">
-          Medexplainer provides informational and educational explanations only and does not replace a doctor or healthcare professional.
-          For medical concerns, decisions, or next steps, consult a qualified healthcare professional.
-        </p>
-      </div>
+  <h2>2. No Doctor-Patient Relationship</h2>
+  <p>
+    Use of the service does not establish a doctor-patient relationship.
+  </p>
 
-      <h2>1) Agreement</h2>
-      <p>
-        By accessing or using <code>medexplainer.online</code> and related services (the “Service”), you agree to these Terms of Use (“Terms”).
-        If you do not agree, do not use the Service.
-      </p>
+  <h2>3. Governing Law</h2>
+  <p>
+    These Terms are governed by applicable law in Cyprus.
+  </p>
 
-      <h2>2) The Service</h2>
-      <p>
-        Medexplainer helps users better understand medical information such as lab results and uploaded medical documents
-        by providing structured, educational explanations (“Outputs”).
-      </p>
-
-      <h2>3) Not a medical service</h2>
-      <ul>
-        <li>The Service provides <b>informational and educational content only</b>.</li>
-        <li>The Service <b>does not replace</b> a doctor or healthcare professional.</li>
-        <li>Outputs may be incomplete, simplified, or incorrect and should be verified with a qualified professional.</li>
-        <li>If you believe you may have an urgent condition, seek immediate professional help.</li>
-      </ul>
-
-      <h2>4) Your responsibilities</h2>
-      <ul>
-        <li>You are responsible for how you use the Service and any decisions you make.</li>
-        <li>You should upload only content you have the right to share and that does not violate laws or third-party rights.</li>
-        <li>You should avoid uploading unnecessary sensitive information where possible.</li>
-      </ul>
-
-      <h2>5) Acceptable use</h2>
-      <p>You agree not to:</p>
-      <ul>
-        <li>Use the Service for unlawful, harmful, or abusive purposes.</li>
-        <li>Attempt to probe, scan, or test the vulnerability of the Service or bypass security measures.</li>
-        <li>Interfere with or disrupt the Service, including by introducing malware or excessive automated requests.</li>
-        <li>Misrepresent Outputs as professional or clinical conclusions.</li>
-      </ul>
-
-      <h2>6) Intellectual property</h2>
-      <p>
-        The Service, its design, structure, and content (excluding User Content) are owned by <b>MEDEXPLAINER</b>
-        and are protected by applicable intellectual property laws.
-        You are granted a limited, non-exclusive, non-transferable right to use the Service
-        for personal and informational purposes, subject to these Terms.
-      </p>
-
-      <h2>7) User content</h2>
-      <p>
-        You retain your rights to the content you upload (“User Content”). You grant us a limited license to process User Content
-        solely to operate the Service, generate Outputs, maintain security, and improve reliability.
-      </p>
-
-      <h2>8) Disclaimers</h2>
-      <p>
-        The Service is provided on an “as is” and “as available” basis. We do not guarantee that the Service will be uninterrupted,
-        error-free, or that Outputs will be accurate or complete.
-      </p>
-
-      <h2>9) Limitation of liability</h2>
-      <p>
-        To the maximum extent permitted by law, we will not be liable for indirect, incidental, special, consequential, or punitive damages,
-        or for any loss of profits, data, or goodwill arising out of or related to your use of the Service.
-      </p>
-      <p class="small">
-        In jurisdictions that do not allow certain limitations, some of the above may not apply to you.
-      </p>
-
-      <h2>10) Termination</h2>
-      <p>
-        We may suspend or terminate access to the Service if we reasonably believe you violated these Terms or if necessary to protect the Service or users.
-      </p>
-
-      <h2>11) Changes to the Service or Terms</h2>
-      <p>
-        We may update the Service and these Terms from time to time. The “Last updated” date reflects the latest version.
-        Continued use after changes means you accept the updated Terms.
-      </p>
-
-      <h2>12) Governing law</h2>
-      <p>
-        These Terms are governed by the laws applicable to the Service operator and the user, as determined by relevant conflict-of-law rules.
-        Any disputes will be handled by the competent courts having jurisdiction under applicable law.
-      </p>
-
-      <div class="notice">
-        <p style="margin:0;color:var(--text);font-weight:700;">Contact</p>
-        <p style="margin:8px 0 0;color:var(--muted);">
-          Questions about these Terms: <a href="mailto:support@medexplainer.online">support@medexplainer.online</a>
-        </p>
-      </div>
-
-      <div class="linkRow" style="margin-top:16px;">
-        <a class="pill" href="./privacy-policy.html">← Privacy Policy</a>
-        <a class="pill" href="./index.html">Back to Home →</a>
-      </div>
-    </main>
-
-    <footer>
-      <div>© 2026 Medexplainer. Informational content only.</div>
-      <div class="linkRow">
-        <a class="small" href="./privacy-policy.html">Privacy</a>
-        <span class="small"> • </span>
-        <a class="small" href="./index.html#contact">Contact</a>
-      </div>
-    </footer>
+  <div class="footer-nav">
+    <a class="btn-secondary" href="/privacy-policy.html">← Privacy Policy</a>
+    <a class="btn-secondary" href="/">Back to Home →</a>
   </div>
+</div>
 </body>
 </html>

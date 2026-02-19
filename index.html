@@ -1,80 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MedExplainer</title>
 
 <style>
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:#0f172a;
-  color:#ffffff;
-  line-height:1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(180deg, #0b1b2e 0%, #081321 100%);
+  color:white;
 }
+
 .container{
   max-width:900px;
-  margin:auto;
+  margin:0 auto;
   padding:40px 20px;
 }
+
 h1{
-  font-size:36px;
+  font-size:40px;
   margin-bottom:10px;
 }
+
 .subtitle{
+  font-size:18px;
   opacity:0.8;
   margin-bottom:40px;
 }
-.btn-main{
+
+.primary-btn{
   display:inline-block;
-  padding:16px 28px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#00d4ff,#00c389);
-  color:#0f172a;
+  padding:14px 28px;
+  border-radius:25px;
+  background:linear-gradient(90deg,#0fd3c8,#12b886);
+  color:#081321;
   font-weight:600;
   text-decoration:none;
   margin-bottom:40px;
 }
-.footer-nav{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:40px;
+
+.disclaimer{
+  margin-top:20px;
+  opacity:0.75;
+  font-size:15px;
 }
-.btn-secondary{
-  display:inline-block;
-  padding:12px 18px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.15);
+
+.steps{
+  display:flex;
+  justify-content:space-between;
+  margin-top:60px;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.step{
+  flex:1;
+  min-width:220px;
   background:rgba(255,255,255,0.05);
-  color:inherit;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+}
+
+.step-number{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:10px;
+  opacity:0.6;
+}
+
+.footer-nav{
+  margin-top:60px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.nav-btn{
+  padding:10px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.05);
+  color:white;
   text-decoration:none;
-  font-weight:500;
   transition:0.2s ease;
 }
-.btn-secondary:hover{
+
+.nav-btn:hover{
   background:rgba(255,255,255,0.1);
 }
+
+footer{
+  margin-top:40px;
+  font-size:13px;
+  opacity:0.6;
+}
 </style>
+
 </head>
-
 <body>
+
 <div class="container">
+
   <h1>MedExplainer</h1>
-  <p class="subtitle">Fast AI-powered insights for health questions</p>
+  <div class="subtitle">Fast AI-powered insights for health questions</div>
 
-  <a class="btn-main" href="#">Enter a Query</a>
+  <a href="/app" class="primary-btn">Enter a Query</a>
 
-  <p>
+  <div class="disclaimer">
     MedExplainer provides informational explanations of medical data.
     It does not provide medical advice, diagnosis, or treatment.
-  </p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      Enter your query & upload medical documents
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      AI analyzes your data
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      Get results & export PDF
+    </div>
+  </div>
 
   <div class="footer-nav">
-    <a class="btn-secondary" href="/terms.html">← Terms of Use</a>
-    <a class="btn-secondary" href="/privacy-policy.html">Privacy Policy →</a>
+    <a class="nav-btn" href="/terms.html">← Terms of Use</a>
+    <a class="nav-btn" href="/privacy-policy.html">Privacy Policy →</a>
   </div>
+
+  <footer>
+    © 2026 MedExplainer. All rights reserved.
+  </footer>
+
 </div>
+
 </body>
 </html>

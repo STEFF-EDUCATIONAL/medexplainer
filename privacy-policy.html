@@ -1,88 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy – MedExplainer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedExplainer — Privacy Policy</title>
+  <meta name="description" content="MedExplainer Privacy Policy (Phase 1–2: Stateless AI analysis + Local storage only). No account required." />
 
-<style>
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:#0f172a;
-  color:#ffffff;
-  line-height:1.7;
-}
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
-}
-h1{
-  font-size:32px;
-  margin-bottom:20px;
-}
-h2{
-  margin-top:30px;
-}
-.footer-nav{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:50px;
-}
-.btn-secondary{
-  display:inline-block;
-  padding:12px 18px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.15);
-  background:rgba(255,255,255,0.05);
-  color:inherit;
-  text-decoration:none;
-  font-weight:500;
-}
-.btn-secondary:hover{
-  background:rgba(255,255,255,0.1);
-}
-</style>
+  <style>
+    :root{
+      --bg1:#071a2b;
+      --bg2:#07101c;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.045);
+      --stroke: rgba(255,255,255,0.14);
+      --text: rgba(255,255,255,0.94);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.58);
+      --accent1:#0fd3c8;
+      --accent2:#12b886;
+      --warn:#ffcf66;
+      --shadow: 0 18px 60px rgba(0,0,0,0.35);
+      --radius: 22px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(17,185,180,0.25), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(18,184,134,0.18), transparent 55%),
+                  linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+      min-height:100vh;
+    }
+
+    .wrap{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 44px 22px 46px;
+    }
+
+    .top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .brand{ max-width: 980px; }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: 42px;
+      letter-spacing: 0.2px;
+      line-height: 1.06;
+    }
+
+    .subtitle{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .metaRow{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin: 0 0 14px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .note{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      max-width: 980px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14.5px;
+      margin: 10px 0 0;
+    }
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      margin-top: 5px;
+      background: linear-gradient(180deg, var(--accent1), var(--accent2));
+      flex: 0 0 auto;
+      box-shadow: 0 0 0 3px rgba(18,184,134,0.12);
+    }
+
+    .warn{
+      margin-top: 12px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 207, 102, 0.22);
+      background: rgba(255, 207, 102, 0.08);
+      color: rgba(255,255,255,0.84);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    .warn strong{ color: rgba(255,255,255,0.92); }
+
+    .card{
+      margin-top: 18px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .cardInner{ padding: 18px 18px 16px; }
+
+    .sectionTitle{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      color: rgba(255,255,255,0.92);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+
+    .sectionTitle span{
+      opacity: .78;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14.5px;
+    }
+
+    .list{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+
+    .li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: var(--card2);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .li b{
+      color: rgba(255,255,255,0.92);
+      font-weight: 800;
+    }
+
+    a{
+      color: rgba(255,255,255,0.82);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .navRow{
+      margin-top: 22px;
+      display:flex;
+      gap: 14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .navBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.92);
+      text-decoration:none;
+      transition: background .16s ease, transform .16s ease;
+      font-weight: 650;
+      letter-spacing: 0.1px;
+    }
+
+    .navBtn:hover{ background: rgba(255,255,255,0.10); transform: translateY(-1px); }
+    .navBtn:active{ transform: translateY(0px); }
+
+    footer{
+      margin-top: 22px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap:wrap;
+    }
+
+    .links{
+      display:flex;
+      gap: 14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .links a{
+      color: rgba(255,255,255,0.62);
+      text-decoration:none;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      padding-bottom: 2px;
+    }
+
+    .links a:hover{ color: rgba(255,255,255,0.80); }
+
+    @media (max-width: 980px){
+      h1{ font-size: 36px; }
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
-  <h1>Privacy Policy</h1>
-  <p>Last updated: 19 February 2026</p>
+  <div class="wrap">
 
-  <h2>1. Overview</h2>
-  <p>
-    MedExplainer operates in a stateless AI analysis mode.
-    Medical text and uploaded documents are transmitted securely to
-    OpenAI API for processing and are not stored on our servers.
-  </p>
+    <div class="top">
+      <div class="brand">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">
+          Effective date: <b>19 February 2026</b><br/>
+          This Privacy Policy explains how <b>MEDEXPLAINER</b> (“we”, “us”, “Service”) handles information when you use MedExplainer.
+          This policy is written for <b>Phase 1–2</b>: <b>stateless AI analysis</b> + <b>local storage on device only</b>.
+        </p>
 
-  <h2>2. Data Storage</h2>
-  <p>
-    We do not maintain user accounts in Phase 1–2.
-    We do not store health history on our backend.
-    Any saved results remain on the user’s device only.
-  </p>
+        <div class="metaRow">
+          <span class="pill">Phase 1–2: Stateless + Local storage</span>
+          <span class="pill">No account required</span>
+          <span class="pill">No ads / no trackers</span>
+        </div>
 
-  <h2>3. Analytics & Tracking</h2>
-  <p>
-    We do not use third-party analytics, advertising SDKs,
-    tracking identifiers, or cross-app tracking technologies.
-  </p>
+        <div class="note">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <b>Important:</b> MedExplainer provides informational explanations of user-provided medical information.
+            It does <b>not</b> provide medical advice, diagnosis, or treatment, and does not replace consultation with a qualified physician.
+          </div>
+        </div>
 
-  <h2>4. Contact</h2>
-  <p>
-    Data Controller / Operator: MEDEXPLAINER<br>
-    Contact: support@medexplainer.online<br>
-    Cyprus
-  </p>
+        <div class="warn">
+          <strong>Emergency notice:</strong> If you think you may have a medical emergency, contact local emergency services immediately.
+        </div>
+      </div>
+    </div>
 
-  <div class="footer-nav">
-    <a class="btn-secondary" href="/">← Back to Home</a>
-    <a class="btn-secondary" href="/terms.html">Terms of Use →</a>
+    <!-- 1) Who we are -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          1) Controller / Operator & Contact
+          <span>Who to contact</span>
+        </div>
+
+        <p class="p">
+          <b>Data Controller / Operator:</b> MEDEXPLAINER<br/>
+          <b>Jurisdiction:</b> Cyprus<br/>
+          <b>Contact:</b> <a href="mailto:support@medexplainer.online">support@medexplainer.online</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 2) Scope -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          2) Scope of this policy
+          <span>What it covers</span>
+        </div>
+
+        <p class="p">
+          This policy applies to the MedExplainer website and the MedExplainer mobile application (together, the “Service”).
+          It does not cover third-party websites or services that may be linked from the Service.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3) What we collect -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          3) Information you provide
+          <span>User-provided content</span>
+        </div>
+
+        <ul class="list">
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Text you enter</b> (e.g., symptoms, questions, lab values you paste).</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Files you upload</b> (e.g., PDFs or images of medical documents, imaging results, photos you choose to provide).</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Age you enter</b> (required) to provide informational context (e.g., typical reference ranges vary by age). We do not use age to identify you.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Name (optional)</b> if you choose to enter it. You can use the Service without providing your name.</div>
+          </li>
+        </ul>
+
+        <div class="note" style="margin-top:12px;">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            You control what you submit. Please avoid uploading information you do not want processed for generating your informational report.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4) What we DO NOT collect -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          4) What we do NOT collect in Phase 1–2
+          <span>Minimization</span>
+        </div>
+
+        <ul class="list">
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>No account data.</b> We do not require registration, and we do not maintain user profiles in Phase 1–2.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>No server-side medical history.</b> We do not store a longitudinal health diary on our servers in Phase 1–2.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>No advertising identifiers.</b> We do not use IDFA/advertising IDs for tracking.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>No analytics SDKs for tracking across apps.</b> We do not integrate third-party analytics or ad SDKs for cross-app tracking in Phase 1–2.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5) How processing works -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          5) How the Service processes your information
+          <span>Stateless processing</span>
+        </div>
+
+        <p class="p">
+          When you submit a query or upload documents, the Service sends your input to an AI processing provider via API to generate an informational explanation.
+          The Service is designed to be <b>stateless</b>: inputs are processed to produce the response and are not stored as a server-side user history in Phase 1–2.
+        </p>
+
+        <ul class="list">
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Text input:</b> processed to generate an explanation and a structured summary.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Images/PDFs:</b> processed to extract text (including via OCR where needed) and generate an explanation.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Temporary files:</b> if the Service creates temporary OCR files (e.g., PDF pages for processing), they are deleted after processing.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6) Local storage -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          6) Local storage on your device
+          <span>On-device only</span>
+        </div>
+
+        <p class="p">
+          If you choose to save or export a report, it is stored <b>on your device</b> (for example, as a local file or within your device storage).
+          In Phase 1–2 we do not provide server-side accounts and we do not store your saved reports on our servers.
+        </p>
+      </div>
+    </div>
+
+    <!-- 7) Legal bases / purposes -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          7) Purposes of processing
+          <span>Why we process</span>
+        </div>
+
+        <ul class="list">
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Provide the Service</b> by generating informational explanations and summaries from your inputs.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Safety and reliability</b> (e.g., prevent abuse, maintain service integrity). In Phase 1–2 we do not log full medical text payloads for this purpose.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8) Sharing -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          8) Sharing & third parties
+          <span>Who receives data</span>
+        </div>
+
+        <p class="p">
+          We share your submitted content only as needed to provide the Service (for example, with the AI API provider used to generate the explanation).
+          We do <b>not</b> sell your personal information and we do <b>not</b> share it with advertisers in Phase 1–2.
+        </p>
+
+        <div class="note" style="margin-top:12px;">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            If you use “Share” functionality, you choose the recipient (e.g., email, messaging apps). This sharing is initiated by you.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9) Retention -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          9) Data retention
+          <span>How long</span>
+        </div>
+
+        <ul class="list">
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>No server-side history retention (Phase 1–2).</b> The Service does not keep a server-side medical history tied to you.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Temporary processing files</b> (if created for OCR) are deleted after processing.</div>
+          </li>
+          <li class="li">
+            <div class="dot" aria-hidden="true"></div>
+            <div><b>Local files</b> (saved reports) remain on your device until you delete them.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10) Security -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          10) Security
+          <span>Protection measures</span>
+        </div>
+
+        <p class="p">
+          We take reasonable technical and organizational measures to protect information during transmission and processing.
+          No method of transmission or storage is 100% secure, but we aim to minimize risk, including by not storing server-side medical history in Phase 1–2.
+        </p>
+      </div>
+    </div>
+
+    <!-- 11) Children -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          11) Children
+          <span>Age considerations</span>
+        </div>
+
+        <p class="p">
+          The Service is intended for general informational use. If you are a parent or guardian and provide information about a minor,
+          you are responsible for providing that information and supervising its use. If you believe a child has provided information without appropriate consent,
+          contact us at <a href="mailto:support@medexplainer.online">support@medexplainer.online</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- 12) International -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          12) International processing
+          <span>Cross-border</span>
+        </div>
+
+        <p class="p">
+          AI processing providers and hosting infrastructure may be located in different countries. Where applicable, transfers are made to provide the Service.
+        </p>
+      </div>
+    </div>
+
+    <!-- 13) Updates -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          13) Changes to this Privacy Policy
+          <span>Updates</span>
+        </div>
+
+        <p class="p">
+          We may update this policy from time to time. We will revise the “Effective date” at the top of this page when changes are made.
+        </p>
+      </div>
+    </div>
+
+    <!-- 14) Contact -->
+    <div class="card">
+      <div class="cardInner">
+        <div class="sectionTitle">
+          14) Contact
+          <span>Support</span>
+        </div>
+
+        <p class="p">
+          Questions about this Privacy Policy: <a href="mailto:support@medexplainer.online">support@medexplainer.online</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Circle navigation: Privacy -> Home or Terms -->
+    <div class="navRow">
+      <a class="navBtn" href="/">← Back to Home</a>
+      <a class="navBtn" href="/terms.html">Terms of Use →</a>
+    </div>
+
+    <footer>
+      <div>© 2026 MedExplainer. All rights reserved.</div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </footer>
+
   </div>
-</div>
 </body>
 </html>

@@ -68,7 +68,6 @@
       font-size:13px;
     }
 
-    /* 🟡 Yellow disclaimer block */
     .disclaimer{
       display:flex;
       gap:10px;
@@ -164,7 +163,6 @@
       flex-wrap:wrap;
       gap:12px;
     }
-
   </style>
 </head>
 
@@ -182,7 +180,6 @@
     <span class="pill">16+</span>
   </div>
 
-  <!-- 🟡 Yellow Medical Disclaimer -->
   <div class="disclaimer">
     <div>
       <strong>Medical disclaimer.</strong>
@@ -217,7 +214,7 @@
       <h2>3) How Processing Works</h2>
       <p>
         Submitted data is transmitted securely (HTTPS) to the backend for processing.
-        The backend forwards requests to a third-party AI provider (OpenAI API) to generate explanations.
+        The backend forwards requests to trusted third-party AI processing services to generate explanations.
       </p>
 
       <p><b>We do not permanently store:</b></p>
@@ -228,26 +225,52 @@
       </ul>
 
       <p>
-        Temporary processing files (e.g., for OCR) may be created and are deleted immediately after processing.
+        Temporary processing files may be created during processing and are deleted immediately after processing.
         The system is session-based and stateless.
       </p>
 
-      <h2>4) Local Storage</h2>
+      <h2>4) User Consent</h2>
+      <p>
+        Before submitting any medical information for AI processing, users are asked to provide explicit consent.
+        No text, documents, images, or medical information are transmitted for AI processing unless the user confirms consent inside the application.
+        Users can withdraw consent at any time in the application settings.
+      </p>
+
+      <h2>5) Local Storage</h2>
       <p>
         Saved reports are stored only on your device. No cloud medical record storage is provided.
       </p>
 
-      <h2>5) Tracking & Advertising</h2>
+      <h2>6) Tracking & Advertising</h2>
       <p>
         We do not use tracking technologies, advertising identifiers, or cross-app tracking.
       </p>
 
-      <h2>6) Age Restriction</h2>
+      <h2>7) Age Restriction</h2>
       <p>
         The Service is intended for users aged <b>16+</b>.
       </p>
 
-      <h2>7) Contact</h2>
+      <h2>8) Data Protection</h2>
+      <p>
+        All data transmitted between the application and backend services is encrypted using secure HTTPS connections.
+        We take reasonable technical and organizational measures to protect user data during processing.
+      </p>
+
+      <h2>9) AI Processing and Third-Party Services</h2>
+      <p>
+        To generate informational explanations, the app may securely transmit information provided by users,
+        such as text questions, age, uploaded medical documents, or images, to backend services and trusted third-party AI processing services.
+      </p>
+      <p>
+        These services process the information only to generate explanations requested by the user inside the app.
+      </p>
+      <p>
+        The Service does not provide medical advice, diagnosis, or treatment, and user data is processed only
+        to generate informational and educational explanations.
+      </p>
+
+      <h2>10) Contact</h2>
       <p>
         support@medexplainer.online
       </p>
